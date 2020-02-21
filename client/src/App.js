@@ -23,8 +23,12 @@ function App() {
     <div className="App">
       <FormikOnboardingForm addUser={addUser} />
       <h1>
-        {users.map(userObj => {
-          return <h1>{userObj.username}</h1>;
+        {users.map((userObj, i) => {
+          return (
+            <h1>
+              User #{i + 1}: {userObj.username}
+            </h1>
+          );
         })}
       </h1>
     </div>
